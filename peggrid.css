@@ -1,0 +1,163 @@
+﻿/* Header (search + refresh) */
+.peggrid-header {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.peggrid-left {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.peggrid-search {
+    padding: 8px 10px;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    min-width: 240px;
+    font-size: 14px;
+}
+
+.peggrid-refresh {
+    padding: 8px 12px;
+    border: 1px solid #d0d7de;
+    background: #fafbfc;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.peggrid-export {
+    padding: 8px 12px;
+    border: 1px solid #d0d7de;
+    background: #fafbfc;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.peggrid-actions button {
+    margin-left: 6px;
+}
+
+/* Scrollable wrapper */
+.peggrid-wrapper {
+    width: 100%;
+    overflow: auto;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    max-height: 70vh; /* keep grid contained on long lists */
+    background: #fff;
+}
+
+/* Table */
+.peggrid-table {
+    width: 100%;
+    min-width: 900px; /* allows horizontal scroll on many columns */
+    border-collapse: separate; /* keeps sticky header shadows crisp */
+    border-spacing: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    font-size: 14px;
+    color: #1f2937;
+}
+
+    /* Header cells */
+    .peggrid-table thead th {
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        background: #f8fafc;
+        font-weight: 600;
+        text-align: left;
+        padding: 10px 12px;
+        border-bottom: 1px solid #e5e7eb;
+        white-space: nowrap;
+    }
+
+.peggrid-sortable {
+    cursor: pointer;
+    user-select: none;
+}
+
+    .peggrid-sortable .peggrid-sort-ind {
+        margin-left: 6px;
+        font-size: 12px;
+        color: #9ca3af;
+    }
+
+/* Body cells */
+.peggrid-table tbody td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #f3f4f6;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.peggrid-table tbody tr:hover {
+    background: #f6f9ff;
+}
+
+/* Footer (pagination) */
+.peggrid-footer {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 2px;
+    font-size: 13px;
+    color: #4b5563;
+}
+
+.peggrid-page-controls {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.peggrid-btn {
+    padding: 6px 10px;
+    border: 1px solid #d1d5db;
+    background: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+    .peggrid-btn:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+
+.peggrid-page-size {
+    padding: 6px 8px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+}
+
+/* Checkbox styling */
+.peggrid-table input[type="checkbox"] {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* Skeleton shimmer */
+.peggrid-skel {
+    height: 12px;
+    width: 80%;
+    margin: 6px 0;
+    border-radius: 4px;
+    background: linear-gradient(90deg, #eef2f7 25%, #e5eaf1 50%, #eef2f7 75%);
+    background-size: 200% 100%;
+    animation: peggrid-shimmer 1.2s infinite;
+}
+
+@keyframes peggrid-shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
