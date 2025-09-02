@@ -1,6 +1,9 @@
 # peggrid
 A lightweight, vanilla JavaScript DataGrid with search, sort, pagination, row selection, csv export and skeleton loading.
 
+## :) Demo Link 
+https://pegssoft.github.io/peggrid/
+
 ## 🚀 Features
 - Search (global)
 - Sorting
